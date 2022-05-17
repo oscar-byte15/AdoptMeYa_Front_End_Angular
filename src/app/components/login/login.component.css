@@ -1,0 +1,39 @@
+.red{
+    color: red;
+}
+.profile-img {
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
+}
+.my-background {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(255, 175, 1, 0.73)), 
+    url(../../../assets/login-background.png); 
+    height: 900px; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover;
+}
+.container {
+    display: flex; 
+    justify-content: center; 
+    margin: 100px;
+}
+.my-height {
+    height: 500px;
+}
+.center-text {
+    display: flex;
+    justify-content: center;
+}
+.center {
+    display: flex; 
+    flex-direction: column;
+}
+.amber-color {
+    color: #ffc107;
+}
+.amber-background {
+    background-color: #ffc107;
+}
+

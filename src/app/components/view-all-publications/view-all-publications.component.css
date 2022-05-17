@@ -1,0 +1,59 @@
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  background-color: #C5CAE9;
+  gap: 1em;
+  align-items: stretch;
+  grid-auto-rows: minmax(100px,auto);
+  margin: 0;
+}
+
+.filters{
+align-self: start;
+  height: 350px;
+  grid-column: 1/2;
+
+}
+.my_adds{
+align-self: start;
+  height: 350px;
+  grid-column: 3/3;
+
+}
+
+.filters button {
+  background-color: #FFC107;
+  color: white;
+}
+
+.publ_action button{
+  background-color: #FFC107;
+  color: white;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 50% 50%;
+grid-template-rows: auto;
+  float:right;
+  gap:10px;
+
+}
+
+.example-card{
+  max-height: 680px;
+}
+
+.information{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.information div{
+  flex-direction: column;
+  color: #212121;
+}

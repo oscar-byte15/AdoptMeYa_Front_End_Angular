@@ -1,0 +1,26 @@
+<div >
+  <h5 >Details of Adoption Request</h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="onNoClick()"></button>
+</div>
+<div >
+
+  <div >
+    <form id="publish-form" #lForm="ngForm" [formGroup]="PublishForm" novalidate >
+      <div style="display: flexbox; flex-direction: row;">
+
+
+        <mat-form-field class="flexbox" appearance="fill">
+          <mat-label>Enter Message</mat-label>
+          <mat-hint>Mandatory</mat-hint>
+          <input matInput type="text" formControlName="message" placeholder="Enter Message"/>
+        </mat-form-field>
+
+
+      </div>
+    </form>
+    <mat-card-actions class="modal-footer">
+      <button mat-raised-button type="button" class="btn btn-danger" (click)="sendAdoptionRequest()" >Send</button>
+    </mat-card-actions>
+  </div>
+
+</div>

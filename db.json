@@ -1,0 +1,471 @@
+{
+  "users": [
+    {
+      "email": "aaaaa@gmail.com",
+      "password": "$2a$10$gZtkNUDWCCzTpzreDGyeOu7l297eg9SI0PDoo2zr/KJMLU64ObCjy",
+      "type": "Client",
+      "user": "admin",
+      "ruc": "",
+      "dni": "4648654",
+      "phone": "965428546",
+      "name": "Ricardo",
+      "lastname": "Yalico",
+      "districtId": 0,
+      "id": 1
+    },
+    {
+      "email": "oz@gmail.com",
+      "password": "$2a$10$rQPWTdlIDsc05Ujfg/wbFO.0vNscoiGu4A2.icO70zkqVEHQYoj2u",
+      "name": "Hernan",
+      "lastname": "Razo",
+      "type": "Client",
+      "user": "basic",
+      "dni": "445555",
+      "phone": "945373426",
+      "id": 4,
+      "districtId": 4,
+      "ruc": "454545"
+    },
+    {
+      "email": "thebest@gmail.com",
+      "password": "$2a$10$7xbubmWXOvEmMM0C7V0EDOcCFMWCU3Z2D3CVwSHYhPuAf0ltSYlq6",
+      "name": "Fifi",
+      "lastname": "thebest",
+      "type": "Client",
+      "user": "basic",
+      "ruc": "12345676765",
+      "dni": "65654522",
+      "phone": "434353453",
+      "districtId": 0,
+      "id": 5
+    },
+    {
+      "email": "vet@gmail.com",
+      "password": "$2a$10$BRQzJteN2CgQzmTqKhlMBe8rHu8Lc8wU.6MUTe7CbtrRR3M3/KUem",
+      "name": "jimmy",
+      "lastname": "veteri",
+      "type": "Veterinarian",
+      "user": "basic",
+      "ruc": "23232343435",
+      "dni": "54544343",
+      "phone": "765454334",
+      "districtId": 0,
+      "id": 6
+    },
+    {
+      "email": "supp@gmail.com",
+      "password": "$2a$10$PJ3ceIpCgbRZ4e8t.HguxuAnjSmIF0YC4/VtWhg7UtLjieuk6Wleu",
+      "name": "lion",
+      "lastname": "supplier",
+      "type": "Supplier",
+      "user": "basic",
+      "ruc": "12655443232",
+      "dni": "87645232",
+      "phone": "7676664521",
+      "districtId": 0,
+      "id": 7
+    },
+    {
+      "email": "testloca@gmail.com",
+      "password": "$2a$10$90j0nNiupAQBacjtu2BT6eCS2BrmEWjfNFy0QtWCWgcEEejPZppqO",
+      "name": "testloca",
+      "lastname": "test",
+      "type": "Client",
+      "user": "basic",
+      "dni": "43434535",
+      "phone": "433437676",
+      "districtId": 1,
+      "id": 8
+    },
+    {
+      "email": "jojo@gmail.com",
+      "password": "$2a$10$67KhFss7IA.q/ZVOmd9HLeNma9IXD5OAmgs7nAg24Kdhf3LKgukx2",
+      "name": "john",
+      "lastname": "smith",
+      "type": "Client",
+      "user": "basic",
+      "dni": "43412677",
+      "phone": "431245765",
+      "districtId": 5,
+      "id": 9
+    },
+    {
+      "email": "jason@gmail.com",
+      "password": "$2a$10$SsC1eyx1Fda9Kjm1pJgMI.o9B0yLWxAGa4I8p5vbDkSN32LZwoDNa",
+      "name": "jason",
+      "lastname": "red",
+      "type": "Client",
+      "user": "basic",
+      "dni": "54779897",
+      "phone": "554576753",
+      "districtId": 20,
+      "id": 10
+    }
+  ],
+  "publications": [
+    {
+      "userId": 5,
+      "comment": "This is a comment!!!",
+      "datetime": "2021-10-20 02:13:17",
+      "petId": 0,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "comment": "busco adoptante responsable",
+      "datetime": "2021-10-11 02:45:43",
+      "petId": 9,
+      "id": 13
+    },
+    {
+      "userId": 5,
+      "comment": "Gatito bebe necesita ayuda",
+      "datetime": "2021-10-13 00:05:58",
+      "petId": 10,
+      "id": 14
+    },
+    {
+      "comment": "sdsdfs",
+      "datetime": "2021-10-22 12:36:39",
+      "userId": 7,
+      "id": 16
+    },
+    {
+      "comment": "This a description",
+      "datetime": "2021-10-22 22:42:59",
+      "userId": 4,
+      "id": 17
+    },
+    {
+      "comment": "test3",
+      "datetime": "2021-10-24 01:35:54",
+      "userId": 10,
+      "id": 21,
+      "petId": 16
+    }
+  ],
+  "pets": [
+    {
+      "id": 0,
+      "type": "Dog",
+      "name": "Juan",
+      "attention": "Require",
+      "race": "chusquito",
+      "age": 2,
+      "isAdopted": "Yes",
+      "userId": 4,
+      "publicationId": 2,
+      "gender": "Male"
+    },
+    {
+      "type": "Cat",
+      "name": "Misha",
+      "attention": "Require",
+      "race": "british",
+      "age": 6,
+      "userId": 5,
+      "publicationId": 13,
+      "gender": "Male",
+      "id": 9
+    },
+    {
+      "type": "Cat",
+      "name": "yobi",
+      "attention": "Dont require",
+      "race": "",
+      "age": 1,
+      "userId": 5,
+      "gender": "Female",
+      "publicationId": 14,
+      "id": 10
+    },
+    {
+      "type": "Gato",
+      "name": "sadads",
+      "attention": "No",
+      "race": "4648654",
+      "age": 3,
+      "isAdopted": "No",
+      "userId": 7,
+      "publicationId": 16,
+      "id": 11
+    },
+    {
+      "type": "Perro",
+      "name": "Luca",
+      "attention": "No",
+      "race": "Caninus",
+      "age": 2,
+      "isAdopted": "No",
+      "userId": 4,
+      "publicationId": 17,
+      "id": 12
+    },
+    {
+      "type": "Cat",
+      "name": "te",
+      "attention": "Dont require",
+      "race": "",
+      "age": 1,
+      "isAdopted": "No",
+      "userId": 10,
+      "publicationId": 21,
+      "gender": "Female",
+      "id": 16
+    }
+  ],
+  "districts": [
+    {
+      "id": 0,
+      "district": "Ventanilla",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 1,
+      "district": "Barranco",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 2,
+      "district": "Miraflores",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 3,
+      "district": "Surquillo",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 4,
+      "district": "San Isidro",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 5,
+      "district": "Callao",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 6,
+      "district": "Chorrillos",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 7,
+      "district": "Comas",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 8,
+      "district": "Jesus Maria",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 9,
+      "district": "La Molina",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 10,
+      "district": "La Victoria",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 11,
+      "district": "Lima",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 12,
+      "district": "Lince",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 13,
+      "district": "Los Olivos",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 14,
+      "district": "Lurin",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 15,
+      "district": "Puenta Piedra",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 16,
+      "district": "Rimac",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 17,
+      "district": "Santiago de Surco",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 18,
+      "district": "San Borja",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 19,
+      "district": "San Isidro",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 20,
+      "district": "San Juan de Lurigancho",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 21,
+      "district": "San Juan de Miraflores",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 22,
+      "district": "San Martin de Porres",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 23,
+      "district": "San Isidro",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 24,
+      "district": "Ventanilla",
+      "description": "This is a descriptión!"
+    },
+    {
+      "id": 25,
+      "district": "Villa El Salvador",
+      "description": "This is a descriptión!"
+    }
+  ],
+  "advertisements": [
+    {
+      "id": 2,
+      "userId": 6,
+      "dateTime": "2021-11-24 02:04:39",
+      "title": "You like it toooo much",
+      "description": "Only for this month",
+      "discount": 30,
+      "urlToImage": "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
+      "promotion": true
+    },
+    {
+      "id": 3,
+      "userId": 6,
+      "dateTime": "2021-10-19 21:16:56",
+      "title": "Buy i for a while!!!",
+      "description": "vcvcxvcx",
+      "discount": 22,
+      "urlToImage": "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
+      "promotion": true
+    },
+    {
+      "userId": 6,
+      "dateTime": "2021-10-19 21:17:30",
+      "title": "test1",
+      "description": "asdasdasdas",
+      "discount": 12,
+      "urlToImage": "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
+      "promotion": true,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 7,
+      "dateTime": "2021-11-24 02:12:57",
+      "title": "Advertisement 1",
+      "description": "asdasda",
+      "discount": null,
+      "urlToImage": "https://blog.mailrelay.com/wp-content/uploads/2018/03/anuncios-publicitarios.png",
+      "promotion": true
+    },
+    {
+      "userId": 7,
+      "dateTime": "2021-10-22 12:36:55",
+      "title": "74647349",
+      "description": "951083038",
+      "discount": null,
+      "urlToImage": "https://blog.mailrelay.com/wp-content/uploads/2018/03/anuncios-publicitarios.png",
+      "promotion": true,
+      "id": 6
+    }
+  ],
+  "transactions": [],
+  "details": [],
+  "memberships": [
+    {
+      "id": 0,
+      "price": 18,
+      "name": "VIP Client",
+      "description": "This is a descriptión!",
+      "listMemberShipId": 0
+    }
+  ],
+  "adoptionRequests": [
+    {
+      "id": 0,
+      "uerIdFrom": 4,
+      "useridAt": 5,
+      "message": "I would like to adopt your pet",
+      "publicationId": 2,
+      "date": "11-02-2021",
+      "approved": false
+    },
+    {
+      "approved": true,
+      "id": 2
+    },
+    {
+      "uerIdFrom": 8,
+      "useridAt": 5,
+      "message": "Hi,I really love your little pet!. Please contact me.",
+      "publicationId": 2,
+      "date": "2021-10-11 09:40:41",
+      "id": 3,
+      "approved": false
+    },
+    {
+      "uerIdFrom": 1,
+      "useridAt": 5,
+      "message": "Misha looks so funny",
+      "publicationId": 13,
+      "date": "2021-10-11 09:51:34",
+      "id": 6,
+      "approved": false
+    },
+    {
+      "uerIdFrom": 4,
+      "useridAt": 5,
+      "message": "I want to get that pet in my house. Please accept my request!",
+      "date": "2021-10-13 11:39:43",
+      "id": 8,
+      "approved": false
+    },
+    {
+      "uerIdFrom": 4,
+      "useridAt": 2,
+      "message": "Hi, please give it to me!",
+      "publicationId": 2,
+      "date": "2021-10-13 11:59:13",
+      "id": 10,
+      "approved": false
+    },
+    {
+      "uerIdFrom": 4,
+      "useridAt": null,
+      "message": "sdsdfsdf",
+      "publicationId": 2,
+      "date": "2021-10-23 17:36:30",
+      "approved": false,
+      "id": 11
+    }
+  ]
+}

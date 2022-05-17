@@ -1,0 +1,120 @@
+<body >
+<div *ngFor="let request of requests;let i = index">
+     <div *ngFor="let user of users;let j = index">
+        <div *ngIf="(requests[i].uerIdFrom === users[j].id) && (requests[i].useridAt === getCurrentIdUser())" >
+
+          <div *ngFor="let publication of publications; let k = index">
+            <div *ngIf="publications[k].id === requests[i].publicationId" >
+
+                <div *ngFor="let pet of pets; let l=index">
+                  <div *ngIf="publications[k].petId === pets[l].id" style="display: flex; justify-content: center; align-items: center">
+
+                    <mat-card class="example-card" style="height: 60%; width: 60%; margin-bottom: 20px">
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-subtitle>{{user.name}}</mat-card-subtitle>
+                        solicitó adoptar a {{pet.name}}
+                      </mat-card-header>
+
+                      <mat-accordion>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                            <mat-panel-description>
+                              Details of adoption request
+                            </mat-panel-description>
+                          </mat-expansion-panel-header>
+                          {{request.message}}
+                        </mat-expansion-panel>
+                      </mat-accordion>
+
+                      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="option">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="deleteRequest(request.id)">
+                          <mat-icon>delete</mat-icon>
+                          Delete
+                        </button>
+                      </mat-menu>
+
+                      <div *ngIf="requests[i].approved === false">
+                        <mat-card-actions align="center">
+                          <button mat-raised-button color="primary" (click)="goToPerfil(user.id)"> See User Profile</button>
+                          <button mat-raised-button color="primary"(click)=
+                            "UpdateAdoptionRequest(request.id, request.uerIdFrom, request.useridAt, request.message, request.publicationId,
+                         true)"> Approve</button>
+                        </mat-card-actions>
+                      </div>
+                      &nbsp;
+                      <div *ngIf="requests[i].approved === true" align="center" style="color:#2f4cb1;">
+                       <p>Aprobaste la solicitud !!</p>
+                        &nbsp;
+                        <div class="img-container">
+                          <img class="img-container" src="assets/images/approved.png">
+                        </div>
+
+                      </div>
+
+
+                    </mat-card>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+       </div>
+
+       <div *ngIf="(requests[i].useridAt === users[j].id) && (requests[i].uerIdFrom === getCurrentIdUser())" >
+
+         <div *ngFor="let publication of publications; let k = index">
+           <div *ngIf="publications[k].id === requests[i].publicationId" >
+
+             <div *ngFor="let pet of pets; let l=index">
+               <div *ngIf="publications[k].petId === pets[l].id" style="display: flex; justify-content: center; align-items: center">
+
+                   <mat-card class="example-card" style="height: 60%; width: 60%; margin-bottom: 20px">
+
+                     <div *ngIf="requests[i].approved === false">
+                       <mat-card-header>
+                         <div mat-card-avatar class="example-header-image"></div>
+
+                         <mat-card-subtitle>{{user.name}}</mat-card-subtitle>
+                         recibió tu solicitud de adopción para {{pet.name}}
+                       </mat-card-header>
+                     </div>
+
+                     <div *ngIf="requests[i].approved === true" align="center" style="color:#2f4cb1">
+                       <mat-card-header>
+                         <div mat-card-avatar class="example-header-image"></div>
+                         <mat-card-subtitle>{{user.name}}</mat-card-subtitle>
+                         <p>aprobó tu solicitud de adopción para {{pet.name}} !!</p>
+                         &nbsp;
+
+                       </mat-card-header>
+                       <div class="img-container2"  >
+                         <img class="img-container2" src="assets/images/accepted.png">
+                       </div>
+                     </div>
+
+
+
+
+                     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="option">
+                       <mat-icon>more_vert</mat-icon>
+                     </button>
+                     <mat-menu #menu="matMenu">
+                       <button mat-menu-item (click)="deleteRequest(request.id)">
+                         <mat-icon>delete</mat-icon>
+                         Delete
+                       </button>
+                     </mat-menu>
+
+                   </mat-card>
+              </div>
+             </div>
+           </div>
+       </div>
+     </div>
+</div>
+</div>
+</body>

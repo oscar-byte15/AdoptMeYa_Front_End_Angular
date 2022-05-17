@@ -1,0 +1,29 @@
+<div class="my-background">
+    <div class="container">
+        <mat-card class="my-height">
+            <mat-card-content>
+                <mat-card-title class="center-text amber-color">Get Started</mat-card-title>
+                <form id="login-form" #lForm="ngForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate >
+                    <div class="center">
+                        <img src="../../../assets/adoptme.jpg" height="200" alt="perrito" class="profile-img">
+                        <mat-form-field appearance="fill" >
+                            <mat-label>Enter your Email</mat-label>
+                            <input matInput type="text" formControlName="email" placeholder="Email"/>
+                            <mat-icon class="amber-color" matSuffix>email</mat-icon>
+                            <mat-error class="red" *ngIf="submitted && loginForm.controls.email.hasError('required')">Field is mandatory</mat-error>
+                            <mat-error class="red" *ngIf="submitted && loginForm.controls.email.hasError('email')">Not correct email</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" placeholder="Password"/>
+                            <mat-icon class="amber-color" type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            <mat-error class="red" *ngIf="submitted && loginForm.controls.password.hasError('required')">Field is mandatory</mat-error>
+                        </mat-form-field>
+                        <button mat-raised-button class="amber-background" type="submit" form="login-form">Log In</button>
+                        <mat-hint>¿Don't have an account?<button mat-button (click)="GoSignup()">Register here</button></mat-hint>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

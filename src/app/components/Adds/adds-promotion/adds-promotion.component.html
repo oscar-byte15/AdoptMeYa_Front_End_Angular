@@ -1,0 +1,20 @@
+
+
+<div *ngFor="let add of Adds;let i = index; let last = last" [ngClass]="{'last-child': last}" style="display: flex; justify-content: center; align-items: center; padding-bottom: 5% ">
+  <mat-card class="example-card" style="height:30%; width:60%">
+    <mat-card-header >
+
+      <mat-card-title *ngIf="add">{{ Adds[i].title }}</mat-card-title>
+
+    </mat-card-header>
+
+      <img alt="image of advertisement"  mat-card-image src="{{Adds[i].urlToImage}}" />
+    <mat-card-content>Description: {{Adds[i].description}} </mat-card-content>
+    <mat-card-content>DateTime: {{Adds[i].dateTime}} </mat-card-content>
+    <mat-card-content>Discount: {{Adds[i].discount}} </mat-card-content>
+    <mat-card-actions>
+      
+    </mat-card-actions>
+  </mat-card>
+
+</div>

@@ -1,0 +1,56 @@
+<div >
+  <h5 >Details of Advertisement Form</h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="onNoClick()"></button>
+</div>
+<div >
+
+  <div >
+    <form id="publish-form" #lForm="ngForm" [formGroup]="AdvertisementForm" novalidate >
+      <div style="display: flexbox; flex-direction: row;">
+
+        <!-------
+        "id": 2,
+      "userId": 4,
+      "dateTime": "21/04/2021 19:20",
+      "title": "You like it",
+      "description": "Only for this month",
+      "discount": 30,
+      "urlToImage": "https://www.lasamarillasdezipaquira.com/oc-content/uploads/1/352.jpg",
+      "promotion": true
+
+        --------->
+
+        <mat-form-field class="flexbox" appearance="fill">
+          <mat-label>Enter Title</mat-label>
+          <mat-hint>Mandatory</mat-hint>
+          <input matInput type="text" formControlName="Title" placeholder="Enter Message"/>
+        </mat-form-field>
+        <mat-form-field class="flexbox" appearance="fill">
+          <mat-label>Enter Description</mat-label>
+          <mat-hint>Mandatory</mat-hint>
+          <input matInput type="text" formControlName="Description" placeholder="Enter Description"/>
+        </mat-form-field>
+        <mat-form-field class="flexbox" appearance="fill">
+          <mat-label>Enter Discount</mat-label>
+          <mat-hint>Mandatory</mat-hint>
+          <input matInput type="text" formControlName="Discount" placeholder="Enter Discount"/>
+        </mat-form-field>
+        <mat-form-field class="flexbox" appearance="fill">
+          <mat-label>Enter UrlToImage</mat-label>
+          <mat-hint>Mandatory</mat-hint>
+          <input matInput type="text" formControlName="UrlToImage" placeholder="Enter UrlToImage"/>
+        </mat-form-field>
+        <mat-form-field class="flexbox" appearance="fill">
+          <mat-label>Any Promotion? true or false</mat-label>
+          <mat-hint>Mandatory</mat-hint>
+          <input matInput type="text" formControlName="Promotion" placeholder="Any Promotion?"/>
+        </mat-form-field>
+
+      </div>
+    </form>
+    <mat-card-actions class="modal-footer">
+      <button mat-raised-button type="button" class="btn btn-danger" (click)="updateAvertisement()" >Update</button>
+    </mat-card-actions>
+  </div>
+
+</div>

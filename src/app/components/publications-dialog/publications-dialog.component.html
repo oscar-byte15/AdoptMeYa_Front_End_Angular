@@ -1,0 +1,68 @@
+<mat-card>
+    <mat-card-content>
+        <div class="title">
+            <mat-card-title>Details of Adoption Publication</mat-card-title>
+            <button type="button" class="btn-close" aria-label="Close" (click)="onNoClick()"></button>
+        </div>
+        <form style="margin:30px" id="publish-form" #lForm="ngForm" [formGroup]="PublishForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="flexbox">
+                <mat-form-field  appearance="fill">
+                    <mat-label>Enter Commentary</mat-label>
+                    <textarea matInput type="text" formControlName="comment" placeholder="Descripción de tu publicacion"></textarea>
+                    <mat-error class="red" *ngIf="submitted && PublishForm.controls.comment.hasError('required')">Field is mandatory</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Type of Pet</mat-label>
+                    <mat-select formControlName="type" [errorStateMatcher] = "matcher1">
+                        <mat-option *ngFor="let posi of type_pets" [value]="posi">{{posi}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="submitted && PublishForm.controls.type.hasError('required')">Field is mandatory</mat-error>
+                </mat-form-field>
+            </div>
+    
+            <div class="flexbox">
+                <mat-form-field  appearance="fill">
+                    <mat-label>Enter Pet's name</mat-label>
+                    <input matInput type="text" formControlName="name" placeholder="Nombre de la mascota"/>
+                    <mat-error class="red" *ngIf="submitted && PublishForm.controls.name.hasError('required')">Field is mandatory</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select needs atention</mat-label>
+                    <mat-select formControlName="attention" [errorStateMatcher] = "matcher1">
+                        <mat-option *ngFor="let pos of need_atention" [value]="pos">{{pos}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="submitted && PublishForm.controls.attention.hasError('required')">Field is mandatory</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="flexbox">
+                <mat-form-field  appearance="fill">
+                    <mat-label>Enter Pet's race</mat-label>
+                    <mat-hint>Optional</mat-hint>
+                    <input matInput type="text" formControlName="race" placeholder="Enter Race"/>
+                </mat-form-field>
+                <mat-form-field  appearance="fill">
+                    <mat-label>Enter Pet's Age</mat-label>
+                    <input matInput type="number" placeholder="Age" formControlName="age">
+                    <mat-hint>Age in years</mat-hint>
+                    <mat-error class="red" *ngIf="submitted && PublishForm.controls.age.hasError('required')">Field is mandatory</mat-error>
+                    <mat-error class="red" *ngIf="submitted && PublishForm.controls.age.hasError('min')">The age cannot be less than 0</mat-error>
+                    <mat-error class="red" *ngIf="submitted && PublishForm.controls.age.hasError('max')">The age cannot be more than 70</mat-error>
+                </mat-form-field>
+            </div>
+            <mat-form-field style="display:flex; justify-content: center;">
+                <mat-label>Select Pet's gender</mat-label>
+                    <mat-select formControlName="gender" [errorStateMatcher] = "matcher2">
+                        <mat-option *ngFor="let pos2 of list_gender" [value]="pos2">{{pos2}}</mat-option>
+                    </mat-select>
+                <mat-error class="red" *ngIf="submitted && PublishForm.controls.gender.hasError('required')">Field is mandatory</mat-error>
+            </mat-form-field>
+        </form>
+        <mat-card-actions style="display: flex; justify-content: center;">
+            <button class="amber-background" mat-raised-button type="button" (click)="onNoClick()">Close</button>
+            <button class="amber-background" mat-raised-button *ngIf="data['info'] !== 'Edit'" type="submit" form="publish-form">Add</button>
+            <button class="amber-background" mat-raised-button *ngIf="data['info'] !== 'Add'" type="button" (click)="updatePublication()">Update</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>
+
+
