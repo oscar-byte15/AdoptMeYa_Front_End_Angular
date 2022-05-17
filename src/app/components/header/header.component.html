@@ -1,0 +1,15 @@
+<mat-toolbar  style="background-color:#2f4cb1; justify-content:space-between; height: 10%;">
+  <div style='margin-top:20px; color: white; display: flex; align-items:center' >
+    <img style='padding-bottom: 60px; width: 200px;  color: white; display: flex; position: absolute;'src="https://i.ibb.co/MRqZ5tL/background.png">
+    <p style='color: white; display: flex; position: absolute;'>AdoptMeYaFrontend</p>
+  </div>
+
+
+
+
+  <span *ngIf="getRouter().url !== '/login' && getRouter().url != '/signup'">
+    <button mat-raised-button style="background-color: #FFC107; color: white"  (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon> <span> Logout</span>
+    </button>
+  </span>
+</mat-toolbar>

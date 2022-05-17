@@ -1,0 +1,27 @@
+#delete {
+  background-color: red;
+  color:white;
+}
+#edit {
+  background-color: blue;
+  color:white;
+}
+.red {
+  color: red;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flexbox{
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+}
+.my-margin-right {
+  margin-right: 40px;
+}
+.amber-background {
+  background-color: #ffc107;
+}

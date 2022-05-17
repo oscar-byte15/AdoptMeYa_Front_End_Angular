@@ -1,0 +1,20 @@
+body {
+  background: transparent url(src/assets/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 1253px) {
+  body {
+    margin-top:300px;
+    padding-bottom:200px;
+  }
+
+  body div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

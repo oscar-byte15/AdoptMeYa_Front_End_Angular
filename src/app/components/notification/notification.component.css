@@ -1,0 +1,71 @@
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+body {
+  background: transparent url(src/assets/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.example-container
+{
+  margin: 30px;
+}
+button{
+  margin:10px;
+  margin-bottom: 30px;
+}
+.option{
+  position:absolute;
+  top:0;
+  right:0;
+}
+.aprove{
+  color: mediumblue;
+}
+.img-container2{
+  width:130px;
+  height:130px;
+  overflow:hidden;
+  animation-name: parpadeo;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+.img-container{
+  width:90px;
+  height:130px;
+  overflow:hidden;
+  animation-name: parpadeo;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}

@@ -1,0 +1,30 @@
+
+<mat-list role="list">
+  <mat-list-item *ngIf="getUser() && getUser().type !== 'Veterinarian'">
+    <button mat-button class="white" (click)="seeAllPublicaions()" >PUBLICATIONS</button>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="getUser() && getUser().type !== 'Veterinarian'">
+    <button  mat-button class="white" (click)="seeMyAllPublicaions()">MY PUBLICATIONS</button>
+  </mat-list-item>
+
+  <mat-list-item >
+    <button mat-button class="white" (click)="seeMyPerfil()">MY PROFILE</button>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="getUser() && getUser().type !== 'Client' ">
+    <button  mat-button class="white" (click)="seeMyAdvertisements()">ADVERTISEMENTS</button>
+  </mat-list-item>
+
+  <mat-list-item >
+    <button  mat-button class="white" (click)="seeMyAdvertisementsWithPromotion()">PROMOTIONS</button>
+  </mat-list-item>
+
+  <mat-list-item>
+    <button mat-button class="white" (click)="seeNotifications()">NOTIFICATION</button>
+  </mat-list-item>
+  
+  <mat-list-item >
+    <button  mat-button class="white"   (click)="showSubscriptions()">SUBSCRIPTIONS</button>
+  </mat-list-item >
+</mat-list>

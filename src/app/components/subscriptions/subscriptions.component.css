@@ -1,0 +1,43 @@
+.subscriptions
+{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(255, 255, 255);
+    justify-content:center;
+}
+
+.example-card {
+    align-items: center;
+    max-width: 360px;
+    margin: 20px;
+    background-color: #181a1b;
+    color:white;
+    text-align: center;
+    border-radius:25px;
+    padding: 48px;
+
+    
+}
+
+mat-card-title
+{
+    padding:20px
+}
+
+mat-card-content ul li 
+{
+    padding-top: 20px;
+    list-style-type: none;
+    margin: 0px;
+    text-decoration: none;
+    font-size:14.4px;
+}   
+
+button
+{
+    display: flex;
+    color:blue;
+    margin:auto ;
+    background-color:white;
+
+}

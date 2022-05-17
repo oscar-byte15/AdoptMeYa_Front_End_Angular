@@ -1,0 +1,110 @@
+<div class="my-background">
+    <div class="my-container">
+        <mat-card>
+            <mat-card-content>
+                <form id="signup-form" #lForm="ngForm" [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+                    <div class="center">
+                        <mat-card-title class="center-text amber-color">Create Account</mat-card-title>
+                        <img src="../../../assets/cat-adoptme.png" height="300" alt="signup-cat" class="profile-img">
+                        <div class="row-flex">
+                            <mat-form-field class="my-margin-right" appearance="fill">
+                                <mat-label>Name</mat-label>
+                                <input matInput type="text" formControlName="name" placeholder="Name"/>
+                                <mat-icon class="amber-color" matSuffix>account_circle</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.name.hasError('required')">Field is mandatory</mat-error>
+                            </mat-form-field>
+                            
+                            <mat-form-field appearance="fill">
+                                <mat-label>Lastname</mat-label>
+                                <input matInput type="text" formControlName="lastname" placeholder="Lastname"/>
+                                <mat-icon class="amber-color" matSuffix>account_circle</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.lastname.hasError('required')">Field is mandatory</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="row-flex">
+                            <mat-form-field class="my-margin-right" appearance="fill">
+                                <mat-label>Email</mat-label>
+                                <input matInput  type="text" formControlName="email" placeholder="Email"/>
+                                <mat-icon class="amber-color" matSuffix>email</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.email.hasError('required')">Field is mandatory</mat-error>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.email.hasError('email')">Not correct email</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" placeholder="Password"/>
+                                <mat-icon class="amber-color" type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.password.hasError('required')">Field is mandatory</mat-error>
+                                <mat-hint>Min length is 5</mat-hint>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.password.hasError('minlength')">Password must have length of 5</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="row-flex">
+                            <mat-form-field class="my-margin-right" appearance="fill">
+                                <mat-label>Type</mat-label>
+                                
+                                <mat-select formControlName="type" [errorStateMatcher] = "matcher" > 
+                                <mat-option *ngFor="let pos of type_user" [value]="pos" (click)="disable(pos)">
+                                    {{pos}}
+                                </mat-option>
+                                </mat-select>
+                                <mat-icon class="amber-color" matSuffix>perm_identity</mat-icon>
+                                <mat-error *ngIf="submitted && signupForm.controls.type.hasError('required')">
+                                Field is mandatory
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field   appearance="fill">
+                                <mat-label>RUC</mat-label>
+                                <input matInput type="text" formControlName="ruc" placeholder="RUC"/>
+                                <mat-icon class="amber-color" matSuffix>credit_card</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.ruc.hasError('pattern')">
+                                    Not a RUC
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="row-flex">
+                            <mat-form-field class="my-margin-right" appearance="fill">
+                                <mat-label>DNI</mat-label>
+                                <input matInput type="text" formControlName="dni" placeholder="DNI"/>
+                                <mat-icon class="amber-color" matSuffix>credit_card</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.dni.hasError('pattern')">
+                                    Not a DNI
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field   appearance="fill">
+                                <mat-label>Phone</mat-label>
+                                <input matInput type="text" formControlName="phone" placeholder="Phone"/>
+                                <mat-icon class="amber-color" matSuffix>phone</mat-icon>
+                                <mat-error class="red" *ngIf="submitted && signupForm.controls.phone.hasError('pattern')">
+                                    Not a peruvian phone number
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        
+                        <div class="center-text">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Location</mat-label>
+                                <mat-select formControlName="location" [errorStateMatcher] = "matcher1">
+                                    <mat-option *ngFor="let posi of location" [value]="posi">
+                                        {{posi}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-icon class="amber-color" matSuffix>location_on</mat-icon>
+                                <mat-error *ngIf="submitted && signupForm.controls.location.hasError('required')">
+                                    Field is mandatory
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <button class="amber-background" mat-raised-button type="submit">Register</button>
+                        <div class="center-text">
+                            <mat-hint>¿Already have an account?<button mat-button (click)="GoLogin()">Log in</button></mat-hint>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

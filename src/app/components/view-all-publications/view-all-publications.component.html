@@ -1,0 +1,140 @@
+  <div  class="container">
+
+    <mat-card class="filters" >
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>District</mat-label>
+        <input
+          type="text"
+          placeholder="Pick one"
+          aria-label="District"
+          matInput
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+          #district>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let itemDistrict of optionsDistrict" [value]="itemDistrict.district">
+            {{ itemDistrict.district }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Kind of animal</mat-label>
+        <mat-select #kindanimal>
+          <mat-option value="Dog">Dog</mat-option>
+          <mat-option value="Cat">Cat</mat-option>
+          <mat-option value="Parrot">Parrot</mat-option>
+          <mat-option value="Turtle">Turtle</mat-option>
+          <mat-option value="Rodents">Rodents</mat-option>
+          <mat-option value="Others">Others</mat-option>
+        </mat-select>
+        <!--mat-hint align="end">Here's the dropdown arrow ^</mat-hint-->
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Gender</mat-label>
+        <mat-select #gender>
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+        <!---mat-hint align="end">Here's the dropdown arrow ^</mat-hint-->
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Require attention</mat-label>
+        <mat-select #attention>
+          <mat-option value="Require">Require</mat-option>
+          <mat-option value="Dont require">Dont require</mat-option>
+        </mat-select>
+        <!--mat-hint align="end">Here's the dropdown arrow ^</mat-hint-->
+      </mat-form-field>
+
+
+      <button
+        type="button"
+        class="btn"
+        (click)="toFilter(kindanimal.value, gender.value, attention.value, district.value)"
+      >
+        Filter
+      </button>
+
+
+    </mat-card>
+
+
+    <div class="cards"  >
+
+      <div *ngFor="let publicationModel of arrayPublications">
+
+      <mat-card class="example-card" >
+
+        <mat-card-header>
+
+          <mat-card-title style="color: #303F9F" >{{publicationModel.name}}</mat-card-title>
+
+          <mat-card-subtitle>{{publicationModel.comment}}</mat-card-subtitle>
+
+          <mat-card-subtitle style="font-size: 12px;">{{publicationModel.datetime}}</mat-card-subtitle>
+
+        </mat-card-header>
+
+        <img
+          mat-card-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+
+        <div class="information">
+
+          <div>
+            <h4>Race: {{ publicationModel.race }}</h4>
+            <h4>Attention: {{ publicationModel.attention }}</h4>
+          </div>
+          <div>
+            <h4>Age: {{ publicationModel.age }} years</h4>
+            <h4>Gender: {{ publicationModel.gender }}</h4>
+          </div>
+          <div>
+            <h4>District: {{ publicationModel.district }}</h4>
+          </div>
+        </div>
+
+
+        <mat-card-actions class="publ_action">
+          <button
+            (click)="
+                            onAdopt(
+                              publicationModel.idUser,
+                              publicationModel.idPublication
+                            )
+                          "
+            id="edit"
+            mat-button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Adopt
+          </button>
+          <button
+            mat-button
+            type="button"
+            (click)="goToProfile(publicationModel.idUser)"
+          >
+            See User Profile
+          </button>
+        </mat-card-actions>
+
+
+      </mat-card>
+      </div>
+
+    </div>
+    <div class="my_adds">
+      <app-my-adds></app-my-adds>
+    </div>
+
+  </div>
+
+
